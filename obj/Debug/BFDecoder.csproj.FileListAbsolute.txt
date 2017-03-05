@@ -1,0 +1,8 @@
+D:\Source\BFDecoder\bin\Debug\BFDecoder.exe.config
+D:\Source\BFDecoder\bin\Debug\BFDecoder.exe
+D:\Source\BFDecoder\bin\Debug\BFDecoder.pdb
+D:\Source\BFDecoder\obj\Debug\Tutorial6.Form1.resources
+D:\Source\BFDecoder\obj\Debug\BFDecoder.Properties.Resources.resources
+D:\Source\BFDecoder\obj\Debug\BFDecoder.csproj.GenerateResource.Cache
+D:\Source\BFDecoder\obj\Debug\BFDecoder.exe
+D:\Source\BFDecoder\obj\Debug\BFDecoder.pdb
