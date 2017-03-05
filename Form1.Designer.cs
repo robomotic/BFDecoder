@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.startToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.stopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.processToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-			this.startToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
 			this.menuStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
 			this.SuspendLayout();
@@ -66,13 +66,35 @@
 			this.fileToolStripMenuItem.Size = new System.Drawing.Size(50, 29);
 			this.fileToolStripMenuItem.Text = "File";
 			// 
+			// openToolStripMenuItem
+			// 
+			this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+			this.openToolStripMenuItem.Size = new System.Drawing.Size(173, 30);
+			this.openToolStripMenuItem.Text = "Open";
+			this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+			// 
+			// startToolStripMenuItem
+			// 
+			this.startToolStripMenuItem.Name = "startToolStripMenuItem";
+			this.startToolStripMenuItem.Size = new System.Drawing.Size(173, 30);
+			this.startToolStripMenuItem.Text = "Start New";
+			this.startToolStripMenuItem.Click += new System.EventHandler(this.startToolStripMenuItem_Click);
+			// 
 			// stopToolStripMenuItem
 			// 
 			this.stopToolStripMenuItem.Enabled = false;
 			this.stopToolStripMenuItem.Name = "stopToolStripMenuItem";
-			this.stopToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
+			this.stopToolStripMenuItem.Size = new System.Drawing.Size(173, 30);
 			this.stopToolStripMenuItem.Text = "Stop";
 			this.stopToolStripMenuItem.Click += new System.EventHandler(this.stopToolStripMenuItem_Click);
+			// 
+			// saveToolStripMenuItem
+			// 
+			this.saveToolStripMenuItem.Enabled = false;
+			this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+			this.saveToolStripMenuItem.Size = new System.Drawing.Size(173, 30);
+			this.saveToolStripMenuItem.Text = "Save";
+			this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
 			// 
 			// toolsToolStripMenuItem
 			// 
@@ -87,50 +109,28 @@
 			// 
 			this.processToolStripMenuItem.Enabled = false;
 			this.processToolStripMenuItem.Name = "processToolStripMenuItem";
-			this.processToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
+			this.processToolStripMenuItem.Size = new System.Drawing.Size(157, 30);
 			this.processToolStripMenuItem.Text = "Process";
 			this.processToolStripMenuItem.Click += new System.EventHandler(this.processToolStripMenuItem_Click);
 			// 
+			// clearToolStripMenuItem
+			// 
+			this.clearToolStripMenuItem.Enabled = false;
+			this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
+			this.clearToolStripMenuItem.Size = new System.Drawing.Size(157, 30);
+			this.clearToolStripMenuItem.Text = "Clear";
+			this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
+			// 
 			// chart1
 			// 
-			chartArea6.Name = "ChartArea1";
-			this.chart1.ChartAreas.Add(chartArea6);
+			chartArea1.Name = "ChartArea1";
+			this.chart1.ChartAreas.Add(chartArea1);
 			this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.chart1.Location = new System.Drawing.Point(0, 33);
 			this.chart1.Name = "chart1";
 			this.chart1.Size = new System.Drawing.Size(1066, 518);
 			this.chart1.TabIndex = 5;
 			this.chart1.Text = "chart1";
-			// 
-			// startToolStripMenuItem
-			// 
-			this.startToolStripMenuItem.Name = "startToolStripMenuItem";
-			this.startToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
-			this.startToolStripMenuItem.Text = "Start New";
-			this.startToolStripMenuItem.Click += new System.EventHandler(this.startToolStripMenuItem_Click);
-			// 
-			// openToolStripMenuItem
-			// 
-			this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-			this.openToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
-			this.openToolStripMenuItem.Text = "Open";
-			this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
-			// 
-			// clearToolStripMenuItem
-			// 
-			this.clearToolStripMenuItem.Enabled = false;
-			this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
-			this.clearToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
-			this.clearToolStripMenuItem.Text = "Clear";
-			this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
-			// 
-			// saveToolStripMenuItem
-			// 
-			this.saveToolStripMenuItem.Enabled = false;
-			this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-			this.saveToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
-			this.saveToolStripMenuItem.Text = "Save";
-			this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
 			// 
 			// Form1
 			// 

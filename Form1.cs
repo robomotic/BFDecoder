@@ -99,18 +99,25 @@ namespace Tutorial6
 					//chart1.Series["Wave"].Points.Add(BitConverter.ToInt16(audioData, i * 2));
 				}
 
+				//foreach (var sample in convertedData)
+				//	chart1.Series["Wave"].Points.Add(sample);
+
+				int freqThreshold = 400;
+
 				foreach (var sample in convertedData)
 				{
-					if (sample > 0 && sample <= 500)
-					{
-						chart1.Series["Wave"].Points.Add(500);
-					}
-					else if (sample < 0 && sample < -500)
-					{
-						chart1.Series["Wave"].Points.Add(-500);
-					}
-				}
+					if (sample > 0 && sample <= freqThreshold)
+						chart1.Series["Wave"].Points.Add(freqThreshold);
 
+					else if (sample > freqThreshold)
+						chart1.Series["Wave"].Points.Add(0);
+
+					else if (sample < 0 && sample <= -freqThreshold)
+						chart1.Series["Wave"].Points.Add(freqThreshold);
+
+					else if (sample < -freqThreshold)
+						chart1.Series["Wave"].Points.Add(0);
+				}
 
 				int mode = (from sample in convertedData where sample > 0 group sample by sample into g orderby g.Count() descending select g.Key).FirstOrDefault();
 				Console.WriteLine("Mode: {0}", mode);
