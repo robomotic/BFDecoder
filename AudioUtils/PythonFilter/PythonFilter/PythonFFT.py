@@ -32,9 +32,10 @@ def produce_fft(infputfile,outputfile):
 	ax2.set_title("FFT of signal")
 	fig.tight_layout()
 	plt.show()
-	plt.savefig(outputfile)   # save the figure to file
-	plt.close()    # close the figure
+	plt.draw()
+	fig.savefig(outputfile,dpi = 300)
 	print("FFT saved")
+	plt.close()
 
 if __name__ == '__main__':
 	produce_fft(r'..\..\..\Samples\recording.wav',r'..\..\..\Samples\recording.png')
