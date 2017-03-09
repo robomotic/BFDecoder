@@ -5,13 +5,16 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>c938c456-1876-4a9f-9b8d-7aed939f85c3</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>PythonFFT.py</StartupFile>
+    <StartupFile>DemodulateMorse.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>PythonFilter</Name>
     <RootNamespace>PythonFilter</RootNamespace>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <CommandLineArguments>-a -v -p D:\MorseDecoder\BFDecoder\Samples\battlefield_1.wav</CommandLineArguments>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,6 +25,18 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DemodulateMorse.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KalmanFilter1D.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Morse.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="peakdetect.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PythonFFT.py">
       <SubType>Code</SubType>
     </Compile>

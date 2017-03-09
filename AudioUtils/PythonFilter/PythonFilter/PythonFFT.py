@@ -66,18 +66,30 @@ def filter_morse(inputfile,outdir=r'..\..\..\Samples',lowcut = 750,highcut = 800
 
 	fig = plt.figure()
 
-
 	ax1 = fig.add_subplot(211)
 	ax2 = fig.add_subplot(212)
 
 	ax1.plot(mono)
 	ax2.plot(filtered)
 	plt.show()
-	
+	return (frate,mono)
+
+def process(mono,frate):
+	squared = np.power(mono,2)
+
+	fig = plt.figure()
+
+	ax1 = fig.add_subplot(211)
+	ax2 = fig.add_subplot(212)
+
+	ax1.plot(mono)
+	ax2.plot(squared)
+	plt.show()
     
 if __name__ == '__main__':
 	
 	if len(sys.argv)==2:
 		(frate,mono) = produce_fft(r'..\..\..\Samples\recording.wav',r'..\..\..\Samples\recording.png')
 	else:
-		filter_morse(r'..\..\..\Samples\recording.wav')
+		(frate,mono) = filter_morse(r'..\..\..\Samples\recording.wav')
+		process(mono,frate)
